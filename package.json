@@ -1,0 +1,33 @@
+{
+  "name": "job-registration",
+  "version": "1.0.0",
+  "description": "API para fazer o cadastro de currículos de candidatos a uma vaga.",
+  "main": "./api/index.js",
+  "scripts": {
+    "dev": "nodemon ./api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniel-melo-me/job-registration.git"
+  },
+  "keywords": [],
+  "author": "Daniel Melo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniel-melo-me/job-registration/issues"
+  },
+  "homepage": "https://github.com/daniel-melo-me/job-registration#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

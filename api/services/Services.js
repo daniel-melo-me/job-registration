@@ -32,15 +32,14 @@ class Services {
      * @returns 
      */
     async criar(dados) {
-
-        // return database[this.model].findAll();
+        return database[this.model].create(dados);
     }
 
     /**
      * Atualiza um registro na base
      * 
      * @param {json} dados 
-     * @param {integer} id 
+     * @return {boolean} 
      */
     async atualizar(dados, id, transacao = {}) {
         return database[this.model]
@@ -53,6 +52,21 @@ class Services {
             },
             transacao
         )
+    }
+
+    /**
+     * Deleta um registro na base
+     * 
+     * @param {integer} id 
+     * @return {boolean} 
+     */
+    async excluir(id) {
+        return database[this.model]
+        .destroy({ 
+            where: { 
+                id: Number(id) 
+            } 
+        });
     }
 
     /**
@@ -74,15 +88,6 @@ class Services {
         )
     }
 
-    /**
-     * Deleta um registro na base
-     * 
-     * @param {integer} id 
-     */
-    async excluir(id) {
-
-    }
-    
 }
 
 module.exports = Services;

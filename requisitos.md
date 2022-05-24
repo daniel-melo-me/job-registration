@@ -7,7 +7,16 @@ O candidato também poderá subir um documento que é seu currículo em pdf ou d
 
 O desafio será basicamente criar as seguintes APIs.
 - CRUD (criação, leitura, remoção, atualização) de candidato
+    - Criação OK
+    - Leitura OK
+    - Remoção OK
+    - Atualização OK
+
 - CRUD de experiência para um candidato
-- upload de um arquivo para um candidato
+    - Criação
+    - Leitura
+    - Remoção
+    - Atualização
+- UPLOAD de um arquivo para um candidato
 
 Para fins de conferência, precisarei de um README.md indicando como executo o código e como testo. Também, de preferência, um Postman ou Insomnia com as chamadas da API para eu poder validar.

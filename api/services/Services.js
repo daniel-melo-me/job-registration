@@ -8,26 +8,18 @@ class Services {
     /**
      * Lista todos os registros 
      * 
-     * @param object model 
+     * @param {query} where 
      * 
-     * @returns 
+     * @returns {model}
      */
-    async listar(id = null) {
-        if (id) {
-            return database[this.model].findOne({
-                where: {
-                    id: Number(id)
-                }
-            });
-        }
-    
-        return database[this.model].findAll();
+    async listar(where = {}) {
+        return database[this.model].findAll({ where: { ...where } });
     }
 
     /**
      * Cria um registro na base
      * 
-     * @param object model 
+     * @param {json} dados 
      * 
      * @returns 
      */
@@ -41,14 +33,12 @@ class Services {
      * @param {json} dados 
      * @return {boolean} 
      */
-    async atualizar(dados, id, transacao = {}) {
+    async atualizar(dados, where = {}, transacao = {}) {
         return database[this.model]
         .update(
             dados,
-            {
-                where: {
-                    id: id
-                }
+            { 
+                where: { ...where } 
             },
             transacao
         )
@@ -60,34 +50,10 @@ class Services {
      * @param {integer} id 
      * @return {boolean} 
      */
-    async excluir(id) {
+    async excluir(where = {}) {
         return database[this.model]
-        .destroy({ 
-            where: { 
-                id: Number(id) 
-            } 
-        });
+        .destroy({ where: { ...where } });
     }
-
-    /**
-     * Atualiza vários registros na base
-     * 
-     * @param {json} dados 
-     * @param {integer} id 
-     */
-    async atualizarVarios(dados, where, transacao = {}) {
-        return database[this.model]
-        .update(
-            dados,
-            {
-                where: {
-                    ...where
-                }
-            },
-            transacao
-        )
-    }
-
 }
 
 module.exports = Services;

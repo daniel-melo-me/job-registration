@@ -1,7 +1,8 @@
 const PessoasServices = require('./PessoasServices.js');
-// const MatriculasServices = require('./MatriculasServices.js');
+const ExperienciasServices = require('./ExperienciasServices.js');
 
 module.exports = {
-    PessoasServices: PessoasServices
+    PessoasServices: PessoasServices,
+    ExperienciasServices: ExperienciasServices
 }
 

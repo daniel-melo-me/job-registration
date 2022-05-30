@@ -13,10 +13,10 @@ O desafio será basicamente criar as seguintes APIs.
     - Atualização OK
 
 - CRUD de experiência para um candidato
-    - Criação
-    - Leitura
-    - Remoção
-    - Atualização
+    - Criação OK
+    - Leitura OK
+    - Remoção OK
+    - Atualização OK
 - UPLOAD de um arquivo para um candidato
 
 Para fins de conferência, precisarei de um README.md indicando como executo o código e como testo. Também, de preferência, um Postman ou Insomnia com as chamadas da API para eu poder validar.

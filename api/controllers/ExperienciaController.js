@@ -37,6 +37,11 @@ class ExperienciaController {
     static async criarExperiencia(req, res) {
         const novaExperiencia = req.body;
         try {
+            const pessoa = await pessoasServices.listar({id: Number(pessoaId)});
+            if (pessoa.length < 1) {
+                return res.status(404).json({ message: `Pessoa não encontrada!`});
+            }
+
             const experiencia = await experienciasServices.criar(novaExperiencia);
             return res.status(201).json(experiencia ? {
                 message: 'Registro salvo com sucesso!',

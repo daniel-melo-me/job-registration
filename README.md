@@ -19,7 +19,10 @@ TABLES:
     Experiências:
         npx sequelize-cli model:create --name Experiencias --attributes data_inicio:dateonly,data_fim:dateonly,emprego_atual:boolean,nome_empresa:string,nome_cargo:string,descricao:string
 
-# RODAR ESSE COMANDO APÓS O BANCO 'job_registation' TER SIDO CRIADO
+# RODAR npm install
+
+# RODAR ESSE COMANDO APÓS O BANCO 'job_registation' TER SIDO CRIADO E o npm install ter sido executado
+
 Rodar as migrations:
     npx sequelize-cli db:migrate
 
@@ -28,7 +31,7 @@ SEEDERS:
     Pessoas:
         npx sequelize-cli seed:generate --name demo-pessoa
 
-# RODAR PARA INSERIR UMAS PESSOAS NA BASE DE TESTE
+# RODAR PARA INSERIR UMAS PESSOAS NA BASE
 Rodar as seeders:
     npx sequelize-cli db:seed:all
 

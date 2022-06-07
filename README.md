@@ -42,6 +42,7 @@ A experiência deverá ser uma lista, que tenha data de início, data de fim, no
 O candidato também poderá subir um documento que é seu currículo em pdf ou docx.
 
 ENDPOINTS CANDIDATO/PESSOA:
+
     CRIAR
         - Adiciona uma nova pessoa na tabela 'pessoas'
         METHOD: POST
@@ -85,6 +86,7 @@ ENDPOINTS CANDIDATO/PESSOA:
             }
 
 ENDPOINTS EXPERIÊNCIAS
+
     CRIAR
         - Adiciona uma nova experiência para uma pessoa na tabela 'experiencias'
         METHOD: POST
